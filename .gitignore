@@ -1,9 +1,6 @@
 # Node modules
 node_modules/
 
-# Banco de dados de produção (NUNCA versionar dados sensíveis)
-db/ingredientes.db
-
 # Logs
 *.log
 npm-debug.log*
@@ -25,9 +22,3 @@ Thumbs.db
 *~
 *.swp
 *.bak
-
-# Exclui por padrão qualquer outro arquivo da pasta db que não seja explícito commitado
-db/*.db
-
-# Permite o arquivo de estrutura vazio (caso ache necessário):
-!db/.keep
