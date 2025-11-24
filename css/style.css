@@ -94,9 +94,6 @@ main>div>#cadastro>div>#box-valor>input {
 
 /* Select de unidade (g/mL) */
 main>div>#cadastro>div>#box-peso>select {
-  -webkit-appearance: none; /* Remove visual padrão do Safari/iOS */
-  -moz-appearance: none;
-  appearance: none;
   border: none;
   width: 6.3vw;
   height: 5vh;
@@ -242,6 +239,27 @@ tbody button {
 
 tbody button:hover {
   background-color: #feb2b2;
+}
+
+select {
+  -webkit-appearance: none; /* Remove visual padrão do Safari/iOS */
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--seis);
+  border: none;
+  padding: 0 1vw;
+  height: 5vh;
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  color: var(--um);
+  border-radius: 0.1rem;
+  text-align: center;
+}
+
+/* Para dispositivos touch, ajuste o cursor e a usabilidade: */
+select:focus {
+  outline: none;
+  box-shadow: 0 0 2px var(--quatro);
 }
 
 /* Mobile */
