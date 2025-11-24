@@ -1,0 +1,33 @@
+# Node modules
+node_modules/
+
+# Banco de dados de produção (NUNCA versionar dados sensíveis)
+db/ingredientes.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos temporários do sistema
+.DS_Store
+Thumbs.db
+
+# Oculta arquivos do VSCode (se estiver usando)
+.vscode/
+
+# Variáveis de ambiente (caso venha a usá-las)
+.env
+.env.*
+
+# Arquivos de backup e cache do editor
+*~
+*.swp
+*.bak
+
+# Exclui por padrão qualquer outro arquivo da pasta db que não seja explícito commitado
+db/*.db
+
+# Permite o arquivo de estrutura vazio (caso ache necessário):
+!db/.keep
