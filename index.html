@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Controle de Custos - Bolos no Pote</title> 
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./img/icon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <header>
+      <img src="./img/icon.ico" alt="" />
+      <p>Calcule seu gasto com ingredientes usados na sua receita.</p>
+    </header>
+
+    <main>
+      <!-- Container agrupando os formulários -->
+      <div id="forms-container">
+        <!-- Formulário de cadastro de ingredientes -->
+        <section id="cadastro">
+          <h2>Cadastrar ingrediente</h2>
+
+          <!-- Input para ingrediente -->
+          <input id="nome" placeholder="Nome (ex: Chocolate Nestlé)" />
+
+          <!-- Inputs: peso/unidade e valor/salvar -->
+          <div>
+            <div id="box-peso">
+              <!-- Input para  peso total -->
+              <input id="peso" type="number" placeholder="Peso total" />
+              <!-- Select para unidade (grama ou mililitro) -->
+              <select id="unidade">
+                <option value="g">g</option>
+                <option value="mL">mL</option>
+              </select>
+            </div>
+            <div id="box-valor">
+              <!-- Input para valor total -->
+              <input
+                id="valor"
+                type="number"
+                step="any"
+                placeholder="Valor (R$)"
+              />
+              <!-- Botão para salvar ingrediente -->
+              <button onclick="cadastrarIngrediente()">Salvar</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Formulário para registrar o uso de um ingrediente já cadastrado -->
+        <section id="uso">
+          <h2>Registrar uso</h2>
+          <div>
+            <select id="ingrediente"></select>
+            <!-- Input para digitar a quantidade usada -->
+            <input id="pesoUso" type="number" placeholder="Peso usado (g)" />
+            <!-- Botão para registrar o uso -->
+            <button onclick="registrarUso()">Registrar</button>
+          </div>
+        </section>
+      </div>
+
+      <!-- Seção da tabela de ingredientes já cadastrados e seus respectivos dados -->
+      <section id="lista">
+        <h2>Ingredientes</h2>
+
+        <!-- Div que possibilita scroll interno caso a lista fique longa -->
+        <div class="tabela-scroll">
+          <table>
+            <thead>
+              <tr>
+                <!-- Cabeçalhos de cada coluna -->
+                <th>Ingrediente</th>
+                <th>Peso total</th>
+                <th>Valor total</th>
+                <th>Usado (g)</th>
+                <th>Gasto (R$)</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <!-- Corpo da tabela preenchido dinamicamente pelo JS -->
+            <tbody id="tabelaIngredientes"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

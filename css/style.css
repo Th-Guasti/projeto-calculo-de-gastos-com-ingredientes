@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* Paleta de cores como variáveis CSS */
+:root {
+  --um: #020202;
+  --dois: #f2f2f2;
+  --tres: #092b5a;
+  --quatro: #09738a;
+  --cinco: #78a890;
+  --seis: #9ed1b7;
+}
+
+/* Reset e fonte padrão */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+}
+
+/* Configuração geral do body */
+body {
+  background-color: var(--seis);
+  color: var(--um);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+header {
+  max-width: 90vw;
+  width: 90vw;
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  background-color: var(--dois);
+  margin-top: 1.5vh;
+  border-radius: 0.2rem;
+}
+
+/* Logo/Icone do header */
+header>img {
+  width: 15px;
+  height: 15px;
+  margin-left: 1rem;
+}
+
+/* Container principal dos formulários */
+main>div {
+  max-width: 90vw;
+  width: 90vw;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 1.5vh;
+  background-color: var(--dois);
+  margin-top: 1.5vh;
+  border-radius: 0.2rem;
+}
+
+/* Seção de cadastro */
+main>div>#cadastro {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  margin: 1rem;
+}
+
+/* Campo de nome do ingrediente */
+main>div>#cadastro>#nome {
+  border: none;
+  width: 86.5vw;
+  height: 5vh;
+  outline: 0;
+  padding-left: 1.5vw;
+}
+
+/* Espaço dos inputs de peso/valor */
+main>div>#cadastro>div {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+/* Inputs de peso e valor nas caixas dedicadas */
+main>div>#cadastro>div>#box-peso>input,
+main>div>#cadastro>div>#box-valor>input {
+  border: none;
+  width: 80vw;
+  height: 5vh;
+  outline: 0;
+  padding-left: 1.5vw;
+}
+
+/* Select de unidade (g/mL) */
+main>div>#cadastro>div>#box-peso>select {
+  border: none;
+  width: 6.3vw;
+  height: 5vh;
+  outline: 0;
+  text-align: center;
+}
+
+/* Botão salvar do cadastro */
+main>div>#cadastro>div>#box-valor>button {
+  border: none;
+  width: 6.3vw;
+  height: 5vh;
+  outline: 0;
+  background-color: var(--quatro);
+  color: var(--dois);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+/* Hover do botão salvar */
+main>div>#cadastro>div>#box-valor>button:hover {
+  background-color: #092b5a;
+}
+
+/* Seção de registro de uso */
+main>div>#uso {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  margin: 1rem;
+}
+
+/* Linha com select, input e botão de uso */
+main>div>#uso>div {
+  display: flex;
+  gap: 0.1vw;
+}
+
+/* Combo de ingredientes no uso */
+main>div>#uso>div>select {
+  border: none;
+  width: 6.3vw;
+  height: 5vh;
+  outline: 0;
+  text-align: center;
+  background-color: var(--seis);
+}
+
+/* Input de peso usado */
+main>div>#uso>div>input {
+  border: none;
+  width: 73.6vw;
+  height: 5vh;
+  outline: 0;
+  padding-left: 1.5vw;
+}
+
+/* Botão registrar uso */
+main>div>#uso>div>button {
+  border: none;
+  width: 6.3vw;
+  height: 5vh;
+  outline: 0;
+  background-color: var(--quatro);
+  color: var(--dois);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+/* Hover botão registrar */
+main>div>#uso>div>button:hover {
+  background-color: var(--tres);
+}
+
+/* Seção da tabela */
+main>#lista {
+  background-color: var(--dois);
+  margin-top: 1.5vh;
+  padding: 1rem;
+}
+
+/* Título da tabela */
+main>#lista>h2 {
+  margin-bottom: 1.5vh;
+}
+
+/* Tabela ocupa quase toda a largura disponível */
+table {
+  max-width: 87vw;
+  width: 87vw;
+  max-height: 40vh;
+  table-layout: fixed;
+  border-spacing: 0;
+}
+
+/* Scroll vertical na tabela */
+.tabela-scroll {
+  height: 40vh;
+  max-height: 40vh;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Cabeçalho fixo ao rolar */
+thead th {
+  z-index: 10;
+  position: sticky;
+  top: 0;
+  background-color: var(--dois);
+  border-bottom: 2px solid var(--quatro);
+  font-weight: 600;
+  text-align: start;
+  padding-bottom: 1rem;
+}
+
+/* Linha do corpo da tabela: divisória */
+tbody tr {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Células do corpo: alinhamento vertical e padding para espaçamento visual */
+tbody td {
+  padding: 1rem 0;
+  text-align: start;
+}
+
+/* Botão excluir dentro da tabela */
+tbody button {
+  cursor: pointer;
+  background-color: #fed7d7;
+  color: #c53030;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 0.2rem;
+  font-size: 0.85rem;
+  transition: background-color 0.3s ease;
+}
+
+tbody button:hover {
+  background-color: #feb2b2;
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  header>p {
+    font-size: 15px;
+  }
+
+  main>div>#cadastro>#nome {
+    width: 82.5vw;
+  }
+
+  main>div>#cadastro>div>#box-peso>input,
+  main>div>#cadastro>div>#box-valor>input {
+    width: 69.1vw;
+  }
+
+  main>div>#cadastro>div>#box-peso>select,
+  main>div>#cadastro>div>#box-valor>button {
+    width: 12.5vw;
+  }
+
+  main>div>#uso>div {
+    gap: 1vw;
+  }
+
+  main>div>#uso>div>select {
+    width: 24.5vw;
+  }
+
+  main>div>#uso>div>input {
+    width: 42.3vw;
+  }
+
+  main>div>#uso>div>button {
+    width: 13.5vw;
+  }
+
+  main>#lista {
+    font-size: 15px;
+  }
+
+  table {
+    width: 83.5vw;
+  }
+
+  /* Ajusta larguras das colunas principais e oculta algumas colunas pra caber na tela menor */
+  table th:nth-child(1),
+  table td:nth-child(1) {
+    width: 28vw;
+  }
+
+  table th:nth-child(2),
+  table td:nth-child(2) {
+    display: none;
+  }
+
+  table th:nth-child(3),
+  table td:nth-child(3) {
+    display: none;
+  }
+}
+
+/* Tablets */
+@media (min-width: 501px) and (max-width: 1279px) {
+  main>div>#cadastro>#nome {
+    width: 83.5vw;
+  }
+
+  main>div>#cadastro>div>#box-peso>input,
+  main>div>#cadastro>div>#box-valor>input {
+    width: 72vw;
+  }
+
+  main>div>#cadastro>div>#box-peso>select,
+  main>div>#cadastro>div>#box-valor>button {
+    width: 10.5vw;
+  }
+
+  main>div>#uso>div {
+    gap: 1vw;
+  }
+
+  main>div>#uso>div>select {
+    width: 12.5vw;
+  }
+
+  main>div>#uso>div>input {
+    width: 54.3vw;
+  }
+
+  main>div>#uso>div>button {
+    width: 14.1vw;
+  }
+}
