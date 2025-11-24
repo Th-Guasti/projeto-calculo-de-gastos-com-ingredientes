@@ -32,9 +32,6 @@ npm start
 5. Acesse no navegador:
 http://localhost:3000
 
-## Observações
-O arquivo db/ingredientes.db NÃO está versionado. Cada usuário pode criar o seu para uso próprio.
-
 ## Dependências
 - express
 - sqlite
