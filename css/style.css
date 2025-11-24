@@ -94,6 +94,9 @@ main>div>#cadastro>div>#box-valor>input {
 
 /* Select de unidade (g/mL) */
 main>div>#cadastro>div>#box-peso>select {
+  -webkit-appearance: none; /* Remove visual padrão do Safari/iOS */
+  -moz-appearance: none;
+  appearance: none;
   border: none;
   width: 6.3vw;
   height: 5vh;
@@ -134,6 +137,9 @@ main>div>#uso>div {
 
 /* Combo de ingredientes no uso */
 main>div>#uso>div>select {
+  -webkit-appearance: none; /* Remove visual padrão do Safari/iOS */
+  -moz-appearance: none;
+  appearance: none;
   border: none;
   width: 6.3vw;
   height: 5vh;
