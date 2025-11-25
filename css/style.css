@@ -38,6 +38,10 @@ header {
   border-radius: 0.2rem;
 }
 
+header>p {
+  font-size: 20px;
+}
+
 /* Logo/Icone do header */
 header>img {
   width: 15px;
@@ -134,7 +138,8 @@ main>div>#uso>div {
 
 /* Combo de ingredientes no uso */
 main>div>#uso>div>select {
-  -webkit-appearance: none; /* Remove visual padrão do Safari/iOS */
+  -webkit-appearance: none;
+  /* Remove visual padrão do Safari/iOS */
   -moz-appearance: none;
   appearance: none;
   border: none;
@@ -242,7 +247,8 @@ tbody button:hover {
 }
 
 select {
-  -webkit-appearance: none; /* Remove visual padrão do Safari/iOS */
+  -webkit-appearance: none;
+  /* Remove visual padrão do Safari/iOS */
   -moz-appearance: none;
   appearance: none;
   background-color: var(--seis);
@@ -264,13 +270,7 @@ select:focus {
 
 /* Mobile */
 @media (max-width: 500px) {
-  header>p {
-    font-size: 15px;
-  }
 
-  main>div>#cadastro>#nome {
-    width: 82.5vw;
-  }
 
   main>div>#cadastro>div>#box-peso>input,
   main>div>#cadastro>div>#box-valor>input {
@@ -325,18 +325,42 @@ select:focus {
 
 /* Tablets */
 @media (min-width: 501px) and (max-width: 1279px) {
+  header>img {
+    width: 35px;
+    height: 35px;
+  }
+
+  header>p {
+    font-size: 30px;
+  }
+
+  main>div>#cadastro>h2 {
+    font-size: 35px;
+  }
+
   main>div>#cadastro>#nome {
     width: 83.5vw;
+
+    font-size: 25px;
   }
 
   main>div>#cadastro>div>#box-peso>input,
   main>div>#cadastro>div>#box-valor>input {
     width: 72vw;
+
+    font-size: 25px;
   }
 
-  main>div>#cadastro>div>#box-peso>select,
+  main>div>#cadastro>div>#box-peso>select {
+    width: 10.5vw;
+
+    font-size: 18px;
+  }
+
   main>div>#cadastro>div>#box-valor>button {
     width: 10.5vw;
+
+    font-size: 25px;
   }
 
   main>div>#uso>div {
@@ -345,13 +369,35 @@ select:focus {
 
   main>div>#uso>div>select {
     width: 12.5vw;
+
+    font-size: 18px;
   }
 
   main>div>#uso>div>input {
     width: 54.3vw;
+
+    font-size: 25px;
   }
 
   main>div>#uso>div>button {
     width: 14.1vw;
+
+    font-size: 25px;
+  }
+
+  main>#lista>h2 {
+    font-size: 35px;
+  }
+
+  main>#lista>div>table>thead>tr>th {
+    font-size: 25px;
+  }
+
+  main>#lista>div>table>tbody {
+    font-size: 25px;
+  }
+
+  main>#lista>div>table>tbody button {
+    font-size: 20px;
   }
 }
