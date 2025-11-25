@@ -1,5 +1,5 @@
 ### Controle de custos
-Este sistema permite controlar ingredientes, usos, estoque e calcular o custo de produção para pequenas cozinhas, negócios caseiros e confeitaria. Possui interface moderna, calculadora integrada, cadastro de ingredientes, registro de uso e tabela para visualização.
+Este sistema permite controlar ingredientes, usos, estoque e calcular o custo de produção para pequenas cozinhas, negócios caseiros e confeitaria. Possui interface moderna, cadastro de ingredientes, registro de uso e tabela para visualização.
 
 ## Funcionalidades
 - Cadastro de ingredientes (nome, peso, valor, unidade)
